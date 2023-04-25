@@ -66,4 +66,12 @@ public class PensionFund {
     public void setCurrencies(List<String> currencies) {
         this.currencies = currencies;
     }
+
+    public TypeOfFund getType() {
+        return type;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

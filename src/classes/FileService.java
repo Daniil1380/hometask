@@ -1,27 +1,24 @@
 package classes;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.net.http.HttpRequest;
 
 public class FileService {
 
     public String getFirstLineForFile(String fileName) {
-        try {
+        File file = new File(fileName);
+
+//try-with-resources
+        try (FileReader fileReader = new FileReader(file);
+                BufferedReader bufferedReader = new BufferedReader(fileReader);
+             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file))) {
             System.out.println("try");
-            File file = new File(fileName);
-            FileReader fileReader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
             String answer = bufferedReader.readLine();
             return answer;
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             System.out.println("catch");
             throw new RuntimeException();
-        }
-        finally {
+        } finally {
             System.out.println("finally");
             //разрыв соединение
             //финально
