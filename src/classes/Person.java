@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+@Deprecated
 public class Person implements Comparable<Person> {
 
     //1) Добавьте класс-утилиту для нахождения среднего значения
