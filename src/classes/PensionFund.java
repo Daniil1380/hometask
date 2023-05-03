@@ -3,7 +3,6 @@ package classes;
 import java.util.List;
 import java.util.Objects;
 
-@JavaMages(value = "google.com")
 public class PensionFund {
 
     private static final double PENSION_COEFFICIENT = 0.02;

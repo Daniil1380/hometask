@@ -11,6 +11,7 @@ public class Person implements Comparable<Person> {
     //а) метод, в который как параметры приходят 2 числа и возвращает среднее значение
     //б) метод, в который приходит 3 числа и он возвращает среднее значение
 
+    @JavaMages
     private String name;
     private int years;
     private int height;
